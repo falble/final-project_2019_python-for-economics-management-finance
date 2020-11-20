@@ -19,19 +19,19 @@ Our intended field of application is clearly operations research. In order to ev
 
 ### INSTALLATION OF LIBRARIES:
 
-If you already have Python 2.7 or 3.5+ installed (as well as the Python package manager, PIP), the easiest way to install OR-Tools is to write the following code in the anaconda prompt:
+If you already have Python 2.7 or 3.5+ installed (as well as the Python package manager, PIP), the easiest way to install OR-Tools is to write the following code in **the anaconda prompt**:
 ```
 python -m pip install --upgrade --user ortools
 ```
 
 ### CONTENT OF THE REPOSITORY:
 
-✓ Three python files: clean_csv.py, call_distance_matrix_api.py, solving_cvrp.py.
-✓ Three examples: Milan.csv, Clients_1.csv, Clients_2.csv.
+- Three python files: **clean_csv.py**, **call_distance_matrix_api.py**, **solving_cvrp.py**.
+- Three examples: **Milan.csv**, **Clients_1.csv**, **Clients_2.csv**.
 
 ### USER MANUAL:
 
-Firstly, you need an Internet connection. Then you have to open the 3 provided python files, and then create a dataset in excel with 3 characteristics (columns): location’s name (1st), customer’s address (2nd) and demand at that location (3rd). Addresses must be written as follows: street’s name, street’s number, city, province (e.g. “Via Olgia 18 Segrate MI”); it doesn’t matter if upper or lower case. If you want to change the order of columns, you just have to modify the numbers at lines 30-31-32 in the clean_csv file (0 = first column of the csv, 1 = second column and 2 = third column).
+Firstly, you need an Internet connection. Then you have to open the 3 provided python files, and then create a dataset in excel with 3 characteristics (columns): location’s name (1st), customer’s address (2nd) and demand at that location (3rd). Addresses must be written as follows: street’s name, street’s number, city, province (e.g. “Via Olgia 18 Segrate MI”); it doesn’t matter if upper or lower case. If you want to change the order of columns, you just have to modify the numbers at lines 30-31-32 in the **clean_csv** file (0 = first column of the csv, 1 = second column and 2 = third column).
 ```
 # filling the three different list reading the csv file    
 with open(file,'r') as fi:
@@ -43,7 +43,7 @@ with open(file,'r') as fi:
         dirty_addresses.append(row[1])
         demands.append(int(row[2]))
 ```
-Save then the file in CSV UTF-8 (comma delimited) format in the same folder. Use the name you want for the file and insert it in line 21 in the clean_csv.
+Save then the file in CSV UTF-8 (comma delimited) format in the same folder. Use the name you want for the file and insert it in line 21 in the **clean_csv**.
 ```
 ############################
 ## INSERT HERE THE  ########
@@ -59,7 +59,7 @@ In the same file, not in the csv, insert the deposit address at line 47 in the a
 depot = 'Via+Zenale+82+Garbagnate+Milanese+MI'
 depot_load = 0
 ```
-Finally, you have to insert your API key at line 32 of call_distance_matrix_api.py file.
+Finally, you have to insert your API key at line 32 of **call_distance_matrix_api.py** file.
 ```
 def create_data():
   """Creates the data."""
@@ -69,9 +69,9 @@ def create_data():
   data['addresses'] = clean.addresses
   return data
 ```
-At this point, run the solving_cvrp.py file, pressing F5; the program will ask you to write the number and capacity of vehicles in the console.
+At this point, run the **solving_cvrp.py** file, pressing F5; the program will ask you to write the number and capacity of vehicles in the console.
 
-Optional: To use a different search method, first solution strategy or local search strategy, check https://developers.google.com/optimization/routing/routing_options; insert the name of the search method at line 154 of solving_cvrp.py in uppercase and use underscores instead of spaces.
+Optional: To use a different search method, first solution strategy or local search strategy, check https://developers.google.com/optimization/routing/routing_options; insert the name of the search method at line 154 of **solving_cvrp.py** in uppercase and use underscores instead of spaces.
 ```
     # you can find other research method here:
     # https://developers.google.com/optimization/routing/routing_options
@@ -90,12 +90,12 @@ Optional: To use a different search method, first solution strategy or local sea
     # Solve the problem.
     assignment = routing.SolveWithParameters(search_parameters)
 ```
-Wait 30 seconds (if you want the program to try to find a better solution for a longer period of time modify the number at line 156 of solving_cvrp.py file) and you will find the optimal solution in the console. The meaning of solver status is the following:
-➢ ROUTING_NOT_SOLVED: Problem not solved yet.
-➢ ROUTING_SUCCESS: Problem solved successfully.
-➢ ROUTING_FAIL: No solution found to the problem.
-➢ ROUTING_FAIL_TIMEOUT: Time limit reached before finding a solution.
-➢ ROUTING_INVALID: Model, model parameters, or flags are not valid.
+Wait 30 seconds (if you want the program to try to find a better solution for a longer period of time modify the number at line 156 of **solving_cvrp.py** file) and you will find the optimal solution in the console. The meaning of solver status is the following:
+- ROUTING_NOT_SOLVED: Problem not solved yet.
+- ROUTING_SUCCESS: Problem solved successfully.
+- ROUTING_FAIL: No solution found to the problem.
+- ROUTING_FAIL_TIMEOUT: Time limit reached before finding a solution.
+- ROUTING_INVALID: Model, model parameters, or flags are not valid.
 
 For each location on a route, the output shows the index of the location and the total load carried by the vehicle when it departs the location. The program will automatically save the output as a txt file in the same folder.
 
