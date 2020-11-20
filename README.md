@@ -1,5 +1,5 @@
 # final-project_2019_python-for-economics-management-finance
-Final Project for an elective course of my bachelor degree in Business Administration and Management. 
+Final Project for an elective course of my bachelor's degree in Business Administration and Management. 
 
 #### Francesco Albertini – 3029229
 #### Arnaldo Contini – 3014053
