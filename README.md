@@ -4,7 +4,7 @@ Final Project for an elective course of my bachelor degree in Business Administr
 #### Francesco Albertini – 3029229
 #### Arnaldo Contini – 3014053
 
-##### NB.unfortunately this project requires a Google API key in order to use the Cloud Platform.
+##### NB. unfortunately this project requires a Google API key in order to use the Cloud Platform.
 
 ## CAPACITATED VEHICLE ROUTING PROBLEM
 
