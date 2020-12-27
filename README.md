@@ -2,9 +2,11 @@
 Final Project for an elective course of my bachelor's degree in Business Administration and Management. 
 
 **Francesco Albertini – 3029229**
+
 **Arnaldo Contini – 3014053**
 
 **NB. unfortunately this project requires a Google API key in order to use the Cloud Platform.**
+
 **NB. if you want to read my entire thesis on the argument click here:**
 https://www.linkedin.com/in/francesco-albertini-47b618153/detail/treasury/education:474321909/?entityUrn=urn%3Ali%3Afsd_profileTreasuryMedia%3A(ACoAACTuwZ8BdD3twa-I4cM6sZL1xxTnb_cmnGw%2C1605888628250)&section=education%3A474321909&treasuryCount=1
 **(only italian, sorry)**
